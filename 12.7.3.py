@@ -1,6 +1,9 @@
 money = float(input("Введите сумму вклада:"))
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-dep1 = per_cent.values()  # приведение процентных ставок в список
-deposit_i = [i * money for i in dep1]  # перемножение суммы вклада и всех процентных ставок
-print("Накопленная сумма за год в каждом из банков:",  (deposit_i))
-print("Максимально накопленная сумма:",  max(deposit_i))
+TKB = int((per_cent['ТКБ']) * (money/100))
+SKB = int((per_cent['СКБ']) * (money/100))
+VTB = int((per_cent['ВТБ']) * (money/100))
+SBER = int((per_cent['СБЕР']) * (money/100))
+deposit = [TKB, SKB, VTB, SBER]
+print("Накопленные средства в каждом из банков =",deposit)
+print("Максимальная накопленная сумма:", max(deposit))
